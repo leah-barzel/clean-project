@@ -5,3 +5,8 @@
   text-align: right;
 }
 
+body {
+  background-image: url('../sky.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
