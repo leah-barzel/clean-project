@@ -2,11 +2,11 @@ import { observer } from "mobx-react";
 import { useEffect } from 'react'
 import Fab from '@mui/material/Fab';
 import EditIcon from '@mui/icons-material/Edit';
-import BusinesStore from "../../Stores/BusinesStore";
+import BusinesStore from "../../Stores/BusinessStore";
 import './busines.css'
 import { getBusines, putBusines } from '../../Stores/Server';
 
-const ShowBusines = (observer(({ func }) => {
+const BusinessDetails = (observer(({ func }) => {
     
     useEffect(() => {
         putBusines(BusinesStore.busines);
@@ -32,4 +32,4 @@ const ShowBusines = (observer(({ func }) => {
 }))
 
 
-export default ShowBusines
+export default BusinessDetails

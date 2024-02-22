@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {Link} from "react-router-dom"
-import Busines from '../Busines/Busines';
+import Busines from '../Busines/Business';
 import ShowServiceAdmin from '../Services/ShowServiceAdmin';
 import ShowMeetingAdmin from '../Meeting/ShowMeetingAdmin';
 import { Button } from '@mui/material'; 

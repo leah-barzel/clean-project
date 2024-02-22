@@ -2,12 +2,12 @@ import { observer } from "mobx-react";
 import { useState } from 'react'
 import { TextField} from "@mui/material";
 import Button from '@mui/material/Button';
-import BusinesStore from "../../Stores/BusinesStore";
+import BusinesStore from "../../Stores/BusinessStore";
 import {putBusines} from '../../Stores/Server';
 import Stack from '@mui/material/Stack';
 import './busines.css'
 
-const EditBusines=(observer(({func})=> {
+const Edit=(observer(({func})=> {
 
 const [formData, setFormData] = useState(BusinesStore.busines);
 
@@ -48,4 +48,4 @@ const handleSubmit = (e) => {
     )
   }))
   
-  export default EditBusines
+  export default Edit

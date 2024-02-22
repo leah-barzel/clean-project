@@ -1,5 +1,5 @@
-import ShowBusinesCustomer from "../Busines/ShowBusinesCustomer"
-import ShowServiceCustomer from "../Services/ShowServiceCustomer"
+import BusinessClient from "../Busines/BusinessClient"
+import ServiceClient from "../Services/ServiceClient"
 
 
 
@@ -7,8 +7,8 @@ function Customer() {
 
     return (
       <>
-      <ShowBusinesCustomer></ShowBusinesCustomer>
-      <ShowServiceCustomer></ShowServiceCustomer>
+      <BusinessClient></BusinessClient>
+      <ServiceClient></ServiceClient>
       </>
     )
   }

@@ -7,7 +7,7 @@ import { getServices } from "../../Stores/Server";
 import Button from '@mui/material/Button';
 import '../Services/Service.css';
 
-const ShowServiceCustomer = (observer(() => {
+const ServiceClient = (observer(() => {
 
     const [isAdd, setIsAdd] = useState(false);
     const [servingList, setServingList] = useState(DataStore.services);
@@ -36,4 +36,4 @@ const ShowServiceCustomer = (observer(() => {
     )
 }))
 
-export default ShowServiceCustomer
+export default ServiceClient

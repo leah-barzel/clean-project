@@ -1,6 +1,6 @@
 import axios from "axios";
 import DataStore from "./DataStore";
-import BusinesStore from "./BusinesStore";
+import BusinesStore from "./BusinessStore";
 
 export async function getServices() {
     const services = await axios.get('http://localhost:8787/services');

@@ -1,10 +1,10 @@
 import { observer } from "mobx-react";
 import { useEffect } from 'react'
-import BusinesStore from "../../Stores/BusinesStore";
+import BusinesStore from "../../Stores/BusinessStore";
 import './busines.css'
 import { getBusines } from '../../Stores/Server';
 
-const ShowBusinesCustomer = (observer(() => {
+const BusinessClient = (observer(() => {
 
   useEffect(() => {
     getBusines();
@@ -23,5 +23,5 @@ const ShowBusinesCustomer = (observer(() => {
   )
 }))
 
-export default ShowBusinesCustomer
+export default BusinessClient
 
