@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './Service.css'
 
-const ShowServiceAdmin = (observer(() => {
+const ServiceAdmin = (observer(() => {
     const [isAdd, setIsAdd] = useState(false);
     const [servingList, setServingList] = useState(DataStore.services);
 
@@ -43,6 +43,6 @@ const ShowServiceAdmin = (observer(() => {
   
 }))
 
-export default ShowServiceAdmin
+export default ServiceAdmin
 
 

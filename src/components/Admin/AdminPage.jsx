@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import {Link} from "react-router-dom"
-import Busines from '../Busines/Business';
-import ShowServiceAdmin from '../Services/ShowServiceAdmin';
-import ShowMeetingAdmin from '../Meeting/ShowMeetingAdmin';
+import Busines from '../Business/Business';
+import ServiceAdmin from '../Services/ServiceAdmin';
+import MeetingColor from '../Meeting/MeetingColor';
 import { Button } from '@mui/material'; 
 import Stack from '@mui/material/Stack';
 import './admin.css'
@@ -24,7 +24,7 @@ const [isServing,setIsServing]=useState(false);
      <Link to ={"services"}><Button variant="contained" onClick={handleService}>שירותים</Button></Link>
      <Link to ={"meetings"}><Button variant="contained" onClick={handleMeet}>פגישות</Button></Link>
     </Stack></div>
-      {isServing? <ShowServiceAdmin></ShowServiceAdmin>:<ShowMeetingAdmin></ShowMeetingAdmin>}
+      {isServing? <ServiceAdmin></ServiceAdmin>:<MeetingColor></MeetingColor>}
     </>
   )
 }

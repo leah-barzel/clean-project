@@ -2,14 +2,14 @@ import { observer } from "mobx-react";
 import { useState } from 'react'
 import { TextField} from "@mui/material";
 import Button from '@mui/material/Button';
-import BusinesStore from "../../Stores/BusinessStore";
-import {putBusines} from '../../Stores/Server';
+import BusinessStore from "../../Stores/BusinessStore";
+import {putBusiness} from '../../Stores/Server';
 import Stack from '@mui/material/Stack';
-import './busines.css'
+import './business.css'
 
 const Edit=(observer(({func})=> {
 
-const [formData, setFormData] = useState(BusinesStore.busines);
+const [formData, setFormData] = useState(BusinessStore.business);
 
 const handleChange = (event) => {
   const { name, value } = event.target;
@@ -19,14 +19,14 @@ const handleChange = (event) => {
 const handleSubmit = (e) => {
   e.preventDefault();
   func();
-  BusinesStore.editDeataild(formData);
-  putBusines(formData);
-  BusinesStore.markIsEdit();
+  BusinessStore.editDeataild(formData);
+  putBusiness(formData);
+  BusinessStore.markIsEdit();
 }
 
     return (
       <>
-      <div className="busines">
+      <div className="business">
        <form onSubmit={handleSubmit} >
        <Stack spacing={2}>
        <TextField  label="שם" name="name" value={formData.name} onChange={handleChange} />

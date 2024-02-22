@@ -1,6 +1,6 @@
 import axios from "axios";
 import DataStore from "./DataStore";
-import BusinesStore from "./BusinessStore";
+import BusinessStore from "./BusinessStore";
 
 export async function getServices() {
     const services = await axios.get('http://localhost:8787/services');
@@ -43,26 +43,10 @@ export async function addMeeting(meeting) {
     }
 }
 
-
-// export async function addMeeting(meeting) {
-//     try {
-//         const res = await axios.post('http://localhost:8787/appointment', meeting);
-//         if (res.status === 200) {
-//             alert("הפגישה נוספה בהצלחה");
-//             DataStore.addMeeting(meeting);
-//             return 'success';
-//         }
-//     }
-//     catch (e) {
-//         alert("תאריך הפגישה תפוס נסו שנית");
-//         return 'failed';
-//     }
-// }
-
-export async function postBusines(busines) {
-    const res = await axios.post('http://localhost:8787/businessData', busines);
+export async function postBusiness(business) {
+    const res = await axios.post('http://localhost:8787/businessData', business);
     if (res.status === 200) {
-        BusinesStore.setBusines(res.data)
+        BusinessStore.setBusiness(res.data)
         return 'success';
     }
     else {
@@ -70,10 +54,10 @@ export async function postBusines(busines) {
     }
 }
 
-export async function putBusines(busines) {
-    const res = await axios.put('http://localhost:8787/businessData', busines);
+export async function putBusiness(business) {
+    const res = await axios.put('http://localhost:8787/businessData', business);
     if (res.status === 200) {
-        BusinesStore.setBusines(res.data)
+        BusinessStore.setBusiness(res.data)
         return 'success';
     }
     else {
@@ -81,7 +65,7 @@ export async function putBusines(busines) {
     }
 }
 
-export async function getBusines() {
-    const busines = await axios.get('http://localhost:8787/businessData');
-    BusinesStore.setBusines(busines.data)
+export async function getBusiness() {
+    const business = await axios.get('http://localhost:8787/businessData');
+    BusinessStore.setBusiness(business.data)
 }

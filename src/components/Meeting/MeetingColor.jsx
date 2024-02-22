@@ -5,7 +5,7 @@ import DataStore from "../../Stores/DataStore";
 import { getMeetings } from '../../Stores/Server';
 import './meeting.css';
 
-const ShowMeetingAdmin = (observer(() => {
+const MeetingColor = (observer(() => {
 
   const [meetingList, setMeetingList] = useState(DataStore.meetings);
 
@@ -22,16 +22,7 @@ const ShowMeetingAdmin = (observer(() => {
     const yyyy = today.getFullYear();
     return `${yyyy}-${mm}-${dd}`;
   };
-  // const getAppointmentStyle = (appointmentDate) => {
-  //   const currentDate = getCurrentDate();
-  //   if (appointmentDate === currentDate) {
-  //     return 'red-background';
-  //   } else if (new Date(appointmentDate) > new Date(currentDate) && new Date(appointmentDate) <= new Date(currentDate).getTime() + 6 * 24 * 60 * 60 * 1000) {
-  //     return 'orange-background';
-  //   } else {
-  //     return 'green-background';
-  //   }
-  // };
+
   const getAppointmentStyle = (appointmentDate) => {
     const currentDate = getCurrentDate();
     if (appointmentDate === currentDate) {
@@ -57,4 +48,4 @@ const ShowMeetingAdmin = (observer(() => {
   )
 }))
 
-export default ShowMeetingAdmin
+export default MeetingColor
